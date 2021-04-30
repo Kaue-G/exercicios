@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    padding: 10px;
+}
+
+.wrapper{
+    margin: 100px auto;
+    max-width: 1100px;
+}
+
+.wrapper nav{
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+}
+
+nav .items{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 720px;
+    width: 100%;
+    justify-content: center;
+}
+
+nav .items .item{
+    padding: 7px 25px;
+    margin: 0 .5rem .5rem 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #007bff;
+
+    border: 2px solid #007bff;
+    border-radius: 50px;
+    cursor: pointer;
+
+    transition: all .8s ease;
+}
+
+nav .items .active,
+nav .items .item:hover{
+    color: #ffffff;
+    background: #007bff;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.gallery .image{
+    padding: 7px;
+    width: calc(100%/4);
+}
+
+.gallery .image.hide{
+    display: none;
+}
+
+.gallery .image.show{
+    animation: animate 2s ease;
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.gallery .image span{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery .image img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.gallery .image:hover img{
+    transform: scale(1.1);
+}
+
+@media(max-width: 1000px){
+    .gallery .image{
+        width: calc(100%/3);
+    }
+}
+
+@media(max-width: 800px){
+    .gallery .image{
+        width: calc(100%/2);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery .image{
+        width: 100%;
+    }
+}
