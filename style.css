@@ -30,7 +30,7 @@
 
 .title {
     padding-left: 20px;
-    background: rgb(102, 46, 46, .6) ;
+    background: rgba(102, 46, 46, .6) ;
 
     
     border: solid rgba(255, 255, 255, .5);
@@ -41,6 +41,8 @@
 .exercicios { 
     background: rgba(43, 172, 246, .5);
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
 
     justify-content: space-around;
     align-items: center;
@@ -50,16 +52,27 @@
     border-radius: 0 0 10px 10px;
 }
 
-.exercicio {
+.exercicios .exercicio {
     background: rgba(255, 255, 255, .5);
     border-radius: 10px;
     padding: 1rem;
     margin: 1rem;
-    width: 25%;
+    width: 20%;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    transition: 1s;
+}
+.exercicios .exercicio:hover {
+    background: rgba(102, 46, 46, .6);
+    color: #fff;
 }
 
 .exercicio h2{
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .exercicio h3{
@@ -68,4 +81,49 @@
 
 .exercicio p{
     font-size: .8rem;
+}
+
+.exercicio a{
+    color: rgb(67, 76, 85);
+    transition: 1s;
+}
+
+.exercicio:hover a{
+    color: rgb(56, 240, 185);
+}
+
+@media (max-width: 1450px) {
+    .exercicio {
+        min-width: 22%;
+    }
+}
+@media (max-width: 1350px) {
+    .exercicio {
+        min-width: 25%;
+    }
+}
+@media (max-width: 1250px) {
+    .exercicio {
+        min-width: 30%;
+    }
+}
+@media (max-width: 1140px) {
+    .exercicio {
+        min-width: 35%;
+    }
+}
+@media (max-width: 830px) {
+    .exercicio {
+        min-width: 40%;
+    }
+}
+@media (max-width: 740px) {
+    .exercicio {
+        min-width: 60%;
+    }
+}
+@media (max-width: 600px) {
+    .exercicio {
+        min-width: 80%;
+    }
 }

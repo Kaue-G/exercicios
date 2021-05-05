@@ -16,7 +16,7 @@ let sliderImages = document.querySelectorAll('.slide'),
         }
 
         //Show preview
-        function slideLeft(){
+        function sliderLeft(){
             reset();
             sliderImages[current - 1].style.display = 'block';
             current--;
@@ -25,7 +25,7 @@ let sliderImages = document.querySelectorAll('.slide'),
         //Show next
         function sliderRight(){
             reset();
-            sliderImages[current + 1].style.display = 'block'
+            sliderImages[current + 1].style.display = 'block';
             current++;
         }
 
